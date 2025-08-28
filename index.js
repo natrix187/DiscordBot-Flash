@@ -54,5 +54,6 @@ client.rmv = (userID, wallet) => {
 }
 // Initializing the project
 require("./handler")(client);
-client.login(process.config.token);
+const token = process.env.DISCORD_TOKEN;
+client.login(token);
 Dashboard(client);
